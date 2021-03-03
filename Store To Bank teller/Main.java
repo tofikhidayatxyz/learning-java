@@ -1,6 +1,4 @@
-import teller.Bank;
-import teller.User;
-import teller.SavingBook;
+import teller.*;
 
 // main
 public class Main {
@@ -26,7 +24,7 @@ public class Main {
                 }
                 // user di panggil
                 System.out.println("Nomor " + bankQueue + " Masuk ke teller"); 
-                boolean bankStored = Bank.giveTellerMySaving(user, savingBook);
+                boolean bankStored = bank.giveTellerMySaving(user, savingBook);
 
                 if(bankStored) {
                     System.out.println("Saldo user sekarang adalah RP." + savingBook.getMoney());

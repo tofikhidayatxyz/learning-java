@@ -26,7 +26,7 @@ public class Bank {
         return randQueue;
     }
 
-    public static boolean giveTellerMySaving(User user, SavingBook savingBook) {
+    public boolean giveTellerMySaving(User user, SavingBook savingBook) {
         int userMoney = user.getMoney();
         System.out.println("User memberikan uang sebanyak RP."+  userMoney +" dan buku tabungan");
         System.out.println("Menyimpan ke database bank");
