@@ -3,18 +3,11 @@ import controller.*;
 import hook.*;
 import model.*;
 
-/**
- * Nama : Tofik hidayat
- * NIM  : 20200040056
- * Keas : TI20C
- */
-
-
 public class Main {
-    static ArrayList<Book> books = new ArrayList<Book>();
-    static ArrayList<Student> students = new ArrayList<Student>();
-    static ArrayList<Transaction> transactions = new ArrayList<Transaction>();
-    
+    static ArrayList<Book> books = new ArrayList<>();
+    static ArrayList<Student> students = new ArrayList<>();
+    static ArrayList<Transaction> transactions = new ArrayList<>();
+
     public static void main(String[] args) {
         String wantToInsertMore = "y";
         // seed
@@ -24,19 +17,18 @@ public class Main {
         // clear console
         Util.clearConsole();
         Scanner scanner = new Scanner(System.in);
-        while(wantToInsertMore.toLowerCase().equals("y")) {
+        while(wantToInsertMore.equalsIgnoreCase("y")) {
             // show menu
             Util.showMenu();
             System.out.print("\n");
             String propmtMenu = Util.promptMenu("Choose menu : ", scanner);
-            switch(propmtMenu) {
+            switch (propmtMenu) {
                 // student block
                 case "1" :
                     StudentController.viewAllStudent(students);
                     break;
                 case "2" :
                     StudentController.addStudent(scanner, students);
-                    System.out.println("Bashasil menginput data");
                     break;
                 case "3" :
                     StudentController.removeStudent(scanner, students);
@@ -66,6 +58,6 @@ public class Main {
             }
         }
         scanner.close();
-        System.out.println("\n======== End Action ========");   
+        System.out.println("\n======== End Action ========");
     }
 }

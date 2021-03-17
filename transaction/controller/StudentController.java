@@ -29,6 +29,7 @@ public class StudentController {
         System.out.print("Masukan NIM Murid  : ");
         nim = scanner.nextLine();
         students.add(new Student((students.size() + 1), name, nim));
+        System.out.println("Bashasil menginput data");
         Util.printLine();
     }
 

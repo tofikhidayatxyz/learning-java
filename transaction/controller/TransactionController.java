@@ -30,7 +30,7 @@ public class TransactionController {
 
         Student student = null;
         Book book = null;
-        int amount = 1;
+        int amount;
         // find student
         System.out.println("========= Input Data Transaksi ========= ");
         while(student == null) {
@@ -67,7 +67,7 @@ public class TransactionController {
 
     // remove transaction by keyword
     public static void removeTransaction(Scanner scanner, ArrayList<Transaction>transactions) {
-        String keyword  = "";
+        String keyword;
         Util.clearConsole();
         System.out.println("========= Hapus Data Transaksi ========= ");
         System.out.print("Masukan keyword [id] : ");
