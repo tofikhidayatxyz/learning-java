@@ -69,7 +69,7 @@ public class PlaylistController {
 
     // delete one
     public void deletePlaylist(Scanner scan) {
-        String keyword;
+        String keyword = "";
         System.out.println("======== Remove Playlist ========");
         System.out.println("## Jika di isi kosong akan menghapus data awal");
         System.out.print("Masukan keyword [title/owner/urutan (di mulai dari 1)]: ");

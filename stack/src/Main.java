@@ -9,7 +9,7 @@ public class Main {
         // initialize playlist
         PlaylistController playlist = new PlaylistController();
 
-        // run seed
+        // run seeders
         playlist.runSeed();
         // action
         while (prompt < 7 && prompt > 0) {
